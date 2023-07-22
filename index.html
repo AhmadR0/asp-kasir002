@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP-Family Kasir App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="pct/logo.png" alt="Logo Kantor">
+            <ul>
+                <li><a href="#"><img src="pct/home.png" alt="">Home</a></li>
+                <li><a href="#"><img src="pct/Laporan.png" alt="">Laporan Harian</a></li>
+                <li><a href="#"><img src="pct/Inventory.png" alt="">Inventori</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>ASP-Family Kasir App</h1>
+        </header>
+
+        <section id="content">
+           <div class="top-content">
+                
+                <section id="form-content">
+                    <!-- Konten halaman akan ditampilkan di sini -->
+                    <form>
+                        <div class="label-input1">
+                            <label  for="kode">Kode Barang</label>
+                            <input id="test" type="text" id="kode" name="kode" required>
+                        </div>   
+                        <div class="label-input2">
+                            <label for="jumlah">Jumlah Barang</label>
+                            <input type="number" id="jumlah" name="jumlah" required>
+                        </div>    
+                        <button type="submit">Enter</button>
+                        <div id="backgroundEdit"></div>
+                    </form>
+
+                    <!-- <form>
+                        <div class="label-container">
+                            <h4>Kode Barang</h4>
+                            
+                            <h4>Jumlah Barang</h4>
+                        </div>   
+                        <div class="input-container">
+                            <input type="text" id="kode" name="kode" required>
+                            <input type="number" id="jumlah" name="jumlah" required>
+                        </div>    
+                        <button type="submit">Enter</button>
+                    </form> -->
+
+
+                </section>
+                
+                <section id="table-content">
+                    <table>
+                        <tr>
+                            <th id="Nama-barang">Nama Barang</th>
+                            <th>Jumlah Pesanan</th>
+                            <th>Kode Barang</th>
+                            <th>Harga Satuan</th>
+                            <th>Total Harga</th>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+            <section id="e-biling">
+                <div class="biling-sub">
+                    <h4>Total Bayar</h4>
+                    <div class="biling-value">
+                        <p> Rp.</p>
+                        <p>80.000</p>
+                    </div>
+                </div>
+
+                <div class="button-biling">
+                    <a href="">Bayar</a>
+                </div>
+            </section>
+        </section>
+           
+
+        <footer>
+            <p>&copy; 2023 ASP-Family Kasir App</p>
+        </footer>
+    </div>
+
+    
+</body>
+</html>
