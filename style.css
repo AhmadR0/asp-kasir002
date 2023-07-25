@@ -80,68 +80,94 @@ header {
 
 /* Gaya konten */
 #content{
+     /* border: 1px solid rgb(223, 13, 13); */
     flex: 1;
     display: flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #F0F0F0;
 }
 
 .top-content{
-   width: 650px;
+   width: 100%;
+   /* border: 1px solid black; */
+   display: flex;
+   justify-content: space-between;
 }
 
 form {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px;
+    width: 100vh;
     position: relative;
-    
+    color: #e7e9eb;
 }
 
 .label-input1{
     display: flex;
-    justify-content: space-between;
-    width: 70%;
-    z-index: 2;
-    position: relative;
-
-
-    
+    justify-content: space-evenly;
+    margin-left: 5px;
+    width: 60%;
+    z-index: 4;
+    position: relative;    
 }
+
+
+
 .label-input2{
     display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
     margin-bottom: 30px;
-    width: 70%;
-    z-index: 2;
+    width: 60%;
+    z-index: 4;
     position: relative;
 }
+
 #backgroundEdit{
-    width: 10%;
-    height: 10%;
-    background-color: salmon;
+    background-color: #08193f;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 41%;
-    height: 100%;
+    left: 20px;
+    width: 27%;
+    height: 60%;
     z-index: 1;
+    border-radius: 10px 0 0 10px;
+}
+
+#backgroundEdit1{
+    background-color:#e7e9eb;
+    position: absolute;
+    width: 30%;
+    height: 60%;
+    top: 0;
+    right: 290px;
+    border-radius: 0px 10px 10px 10px;
+    z-index: 3;
+    /* border: 1px solid salmon; */
 }
 
 button{
     z-index: 2;
     position: relative;
+    
+}
+
+input{
+    height: 25px;
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 5px;
+}
+
+input:hover{
+    box-shadow: 2px 2px 2px 1px #3c6688;
 }
 
 
-
-
-
-
-
-#table-content{
-    margin-left: 20px;    
-}
 
 .label-input input:hover {
     box-shadow: 0 0 5px 0 rgba(1, 149, 255, 0.959);
@@ -150,49 +176,83 @@ button{
     box-shadow: 0 0 5px 0 rgba(1, 149, 255, 0.959);
     outline: none;
 }
-#table-content table{
-    width: 90%;
-}
-#table-content table,th,td{
-    border: 1px solid #001C30;
-}
 
-#Nama-barang{
-    width: 40%;
-}
+
 button{
     height: 30px;
     margin-left: 200px;
 }
 
-.biling-sub{
-    display: flex;
+section#form-content button[type="submit"] {
     background-color: #08193f;
-    color: #e7e9eb;
-    padding-left: 10px;
-    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    margin: 10px;
+    cursor: pointer;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-    /* padding-top: 10px; */
 }
-.biling-sub h4{
-    padding-top: 20px;
-}    
-.button-biling{
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 0;
-}
-.button-biling a{
-    background-color: #08193f;
-    color: #e7e9eb;
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    justify-content: center;
-    display: flex;
-    padding: 15px 0 0 0;
 
+/* section#form-content button[type="submit"]:hover,
+section#form-content button[type="submit"]:focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+} */
+
+section#form-content button[type="submit"]:hover{
+    background-color: #030d25;
+}
+
+#e-biling{
+    /* border: 1px solid black; */
+    width: 100%;
+    position: relative;
+}
+.content-biling{
+    display: flex;
+    align-items: center;
+    width: 64%;
+    height: 55%;
+    box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ;
+    border-radius: 0 0 5px 5px;
+}
+.content-biling h4{
+    margin-right: 50px;
+    padding-left: 15px;
+    z-index: 2;
+    color: #F0F0F0;
+}
+
+.content-biling p{
+    z-index: 2;
+    padding: 10px;
+}
+
+#backgraundBiling1{
+    background-color:#08193f;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 10px 0 0 10px;
+    /* box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ; */
+}
+
+#backgraundBiling2{
+    background-color:#e7e9eb;
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 0;
+    right: 60px;
+    z-index: 1;
+    border-radius: 0px 10px 10px 10px;
+    /* box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ; */
 }
 
 section#form-content button[type="submit"] {
@@ -206,24 +266,52 @@ section#form-content button[type="submit"] {
     transition: box-shadow 0.3s ease;
 }
 
-section#form-content button[type="submit"]:hover,
-section#form-content button[type="submit"]:focus {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    outline: none;
+section#e-biling button[type="submit"] {
+    background-color: #08193f;
+    color: #ffffff;
+    margin-top: 17px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    width: 120px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
-.biling-value{
-    display: flex;
-    margin-left: 100px;
-    background-color: #e7e9eb;
-    width: 200px;
-    padding: 20px;
-    color: #08193f;
-    border-radius: 0 0 0 10px;
+
+section#e-biling button[type="submit"]:hover{
+    background-color: #030d25 ;
 }
 
+
+#barang-pesan{
+    font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#barang-pesan th,#barang-pesan td{
+    border: 1px solid #F0F0F0;
+    padding: 10px;
+    
+}
+
+#barang-pesan th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color:#08193f;
+    color: white;
+}
+
+#barang-pesan tr:nth-child(even){
+    background-color: #8b8b8b;
+}
 
 /* Gaya footer */
+
 footer {
     background-color: #001C30;
     color: #fff;
