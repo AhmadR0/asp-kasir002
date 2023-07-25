@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP-Family Kasir App</title>
+    <link rel="stylesheet" href="style-laporan.css">
+    <!-- <script src="chartjs/Chart.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="pct/logo.png" alt="Logo Kantor">
+            <ul>
+                <li><a href="index.html"><img src="pct/home.png" alt="">Home</a></li>
+                <li><a href="laporan.html"><img src="pct/Laporan.png" alt="">Laporan Harian</a></li>
+                <li><a href="inventory.html"><img src="pct/Inventory.png" alt="">Inventori</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>ASP-Family Kasir App</h1>
+        </header>
+
+        <section id="content">
+           <section id="grafik-container">
+                <div class="card-box-grafik">
+                    <h4>Grafik Harian</h4>
+
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="card-box-grafik">
+                    <h4>Grafik Bulanan</h4>
+                </div>
+                <div class="card-box-grafik">
+                    <h4>Grafik Tahunan</h4>
+                </div>
+           </section>
+
+        </section>            
+
+
+        </section>
+           
+
+        <footer>
+            <p>&copy; 2023 ASP-Family Kasir App</p>
+        </footer>
+    </div>
+
+    
+</body>
+<script src="Grafik.js"></script>
+
+</html>
