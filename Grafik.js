@@ -9,30 +9,7 @@ const data = {
       borderColor: 'blue',
       fill: false,
     },
-    {
-      label: 'Asp 2',
-      data: [100, 90, 130, 70, 180, 160, 230, 70, 90],
-      borderColor: 'red',
-      fill: false,
-    },
-    {
-      label: 'Asp 3',
-      data: [120, 140, 170, 100, 150, 140, 70, 100, 120],
-      borderColor: 'green',
-      fill: false,
-    },
-    {
-      label: 'Asp 4',
-      data: [60, 270, 200, 70, 60, 90, 200, 180, 160],
-      borderColor: 'yellow',
-      fill: false,
-    },
-    {
-      label: 'Asp 5',
-      data: [200, 120, 40, 170, 100, 190, 250, 200, 10],
-      borderColor: 'black',
-      fill: false,
-    }
+    
   ]
 };
 
@@ -101,12 +78,6 @@ const monthlyIncomeData = {
             label: 'Asp 1',
             data: [5000, 6000, 5500, 7000, 8000, 7500, 9000, 9500, 8200, 7000, 6500, 6800],
             borderColor: 'orange',
-            fill: false,
-          },
-          {
-            label: 'Asp 2',
-            data: [6000, 5000, 4500, 6500, 7500, 7000, 8000, 8500, 7300, 6000, 5500, 5800],
-            borderColor: 'purple',
             fill: false,
           },
     ]
