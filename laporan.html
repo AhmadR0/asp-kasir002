@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style-laporan.css">
     <!-- <script src="chartjs/Chart.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
@@ -27,30 +28,127 @@
 
         <section id="content">
            <section id="grafik-container">
-                <div class="card-box-grafik">
-                    <h4>Grafik Harian</h4>
-
-                    <canvas id="lineChart"></canvas>
+                <div class="btn">
+                    <div class="dropdown">
+                        <button class="dropbtn">Menu Dropdown</button>
+                        <div class="dropdown-content">
+                          <a href="#">Konter Asp1</a>
+                          <a href="#">Konter Asp2</a>
+                          <a href="#">Konter Asp3</a>
+                          <a href="#">Konter Asp4</a>
+                          <a href="#">Konter Asp5</a>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-add"> + </button>
+                    <button type="button" class="btn-add"> + </button>
+                    <button type="button" class="btn-add"> + </button>
                 </div>
-                <div class="card-box-grafik">
-                    <h4>Grafik Bulanan</h4>
-                    <canvas id="monthlyIncomeChart"></canvas>
+                
+                <section id="card-container">
+                    <div class="card-box-grafik">
+                        <h4>Grafik Harian</h4>
+    
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                    <div class="card-box-grafik">
+                        <h4>Grafik Bulanan</h4>
+                        <canvas id="monthlyIncomeChart"></canvas>
+                    </div>
+                    <div class="card-box-grafik">
+                        <h4>Grafik Tahunan</h4>
+                        <canvas id="laporanTahunan"></canvas>
+                    </div>
+                </section>
+           </section>
+           <div class="laporan-container">
+                <div class="box-card-laporan">
+                    <h4>Pendapatan Hari Ini: </h4>
+                    <div class="box-head-card"></div>
+                    <p>Rp.</p><p class="value">5000000</p>
                 </div>
-                <div class="card-box-grafik">
-                    <h4>Grafik Tahunan</h4>
-                    <canvas id="laporanTahunan"></canvas>
+                <div class="box-card-laporan">
+                    <h4>Pendapatan Bulan ini Ini: </h4>
+                    <div class="box-head-card"></div>
+                    <p>Rp.</p><p class="value">5000000</p>
+                </div>
+                <div class="box-card-laporan">
+                    <h4>Pendapatan Tahun Ini: </h4>
+                    <div class="box-head-card"></div>
+                    <p>Rp.</p><p class="value">5000000</p>
+                </div>
+           </div>
+           <section id="riwayat-pemasukan">
+                <div class="box-head-riwayat"> 
+                    <h4>Tabel Riwayat Pemasukan</h4>
+                </div>
+                <div class="table-riwayat-container">
+                    <table class="riwayat">
+                        <tr>
+                            <th>Nama Barang</th>
+                            <th>Jumlah Pesanan</th>
+                            <th>Kode Barang</th>
+                            <th>Harga Satuan</th>
+                            <th>Total Harga</th>
+                            <th>Waktu Transaksi</th>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                        <tr>
+                            <td>Nama Barang</td>
+                            <td>Jumlah Pesanan</td>
+                            <td>Kode Barang</td>
+                            <td>Harga Satuan</td>
+                            <td>Total Harga</td>
+                            <td>Waktu Transaksi</td>
+                        </tr>
+                    </table>
                 </div>
            </section>
-
         </section>            
-
-
-        </section>
            
-
+        
         <footer>
             <p>&copy; 2023 ASP-Family Kasir App</p>
         </footer>
+
     </div>
 
     

@@ -84,25 +84,263 @@ header {
     flex: 1;
     display: flex;
     background-color: #F0F0F0;
+    /* width: 100%; */
+    flex-direction: column;
+    /* overflow: auto; */
 }
 
 #grafik-container{
+    /* border: 1px solid skyblue; */
     padding-top: 10px;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    width: 95%;
+    height: 620px;
     padding-left: 10px;
     padding-right: 10px;
+    position: relative;
+    /* overflow: hidden; */
 }
-.card-box-grafik{
-    height: 40%;
+
+.btn{
+    /* border: 1px solid olivedrab; */
     width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+/* =========================== */
+.dropbtn {
+    background-color:#fff;
+    color:#08121a;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* border: 1px solid salmon; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    border-radius: 5px;
+    font-weight: 100px;   
+    box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ;
+}
+.dropbtn1 {
+    background-color:#fff;
+    color:#08121a;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    /* border: 1px solid salmon; */
+    position: absolute;
+    top: 0;
+    left: 100px;
+    height: 100%;
+    width: 200px; 
+    border-radius: 5px;
+    font-weight: 100px;   
+    
+}
+
+    /* Warna background dari tombol utama ketika isi konten dropdown ditampilkan */
+.dropdown:hover .dropbtn {
+    background-color: #fcfcfc;
+}
+
+    /* Isi dari <div> - Diperlukan untuk memposisikan isi konten dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* border: 1px solid salmon; */
+    width: 15%;
+    height: 100%;
+}
+
+    /* Isi konten dropdown (disembunyikan) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#08193f;
+    min-width: 10px;
+    width: 70%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top:35px;
+    left: 0;
+    border-radius: 0 0 10px 10px;
+    /* justify-content: center; */
+}
+
+    /* Link di dalam menu dropdown */
+.dropdown-content a {
+    color:#fff;
+    padding: 0;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Warna link di dalam dropdown ketika disorot */
+.dropdown-content a:hover {
+    background-color:#fff;
+    color: #08121a !important;
+}
+
+    /* Tampilkan isi konten dopdown ketika disorot */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================== */
+
+.btn-add{
+    background-color: #fff;
+    width: 3%;
+    height: 100%;
+    /* border: 1px solid skyblue; */
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ;
+}
+#card-container{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid salmon; */
+}
+
+.card-box-grafik{
+    height: 100%;
+    width: 30%;
     background-color:#ffffff;
     margin-left: 15px;
     padding-left: 10px;
     border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ;
+    /* border: 1px solid black; */
 }
+
+.laporan-container{
+    display: flex;
+
+    width: 100%;
+    height: 100px;
+    /* padding-left: 10px; */
+    /* border: 1px solid purple; */
+    justify-content: space-around;
+}
+
+.box-card-laporan{
+    
+    background-color: #fff;
+    width: 20%;
+    height: 100px;
+    padding-left: 30px;
+    /* margin-left: 10px; */
+    border-radius: 10px;
+    position: relative;
+    /* border: 1px solid orange; */
+    z-index: 1;
+    box-shadow: 2px 2px 2px 2px rgb(201, 199, 199) ;
+}
+.box-card-laporan p{
+    display: inline;
+    color: #08121a;
+    margin-top: 60px;
+    z-index: 3;
+    position: absolute;
+}
+
+.box-card-laporan .value{
+    display: inline;
+    color: #08121a;
+    margin-top: 60px;
+    z-index: 3;
+    left: 70px;
+
+    position: absolute;
+}
+.box-head-card{
+    position: absolute;
+    background-color: #08193f;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 10px 0;
+    z-index: 2;
+}
+
+.box-card-laporan h4{
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    /* border: 1px solid salmon;     */
+}
+
+#riwayat-pemasukan{
+    width:99%;
+    height:100%;
+    /* margin: 0; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    
+    padding-left: 10px;
+    /* border: 1px solid red; */
+}
+
+.box-head-riwayat{
+    width: 100%;
+    height: 50px;
+    background-color:#fff;
+    color:#08121a;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 10px; */
+    /* margin: 0; */
+}
+
+.table-riwayat-container{
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+}
+.riwayat{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .riwayat th,.riwayat td{
+      border: 1px solid #F0F0F0;
+      padding: 10px;
+      
+  }
+  
+  .riwayat th{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: center;
+      background-color:#08193f;
+      color: white;
+  }
+  
+  .riwayat tr:nth-child(even){
+      background-color: #8b8b8b;
+  }
+
+
 
 
 /* Gaya footer */
