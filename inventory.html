@@ -9,12 +9,11 @@
 <body>
     <div class="container">
         <nav>
-            <img src="pct/logo.png" alt="Logo Kantor">
+            <img src="pct/logo.png" alt="Logo Kantor" width="200px">
             <ul>
-                <li><a href="index.html"><img src="pct/home.png" alt="">Home</a></li>
-                <li><a href="laporan.html"><img src="pct/Laporan.png" alt="">Laporan Harian</a></li>
-                <li><a href="#"><img src="pct/Inventory.png" alt="">Inventori</a></li>
-            </ul>
+                <li><a href="index.html"><img src="pct/home.png" alt="" width="20px" class="nav-img">Home</a></li>
+                <li><a href="laporan.html"><img src="pct/Laporan.png" alt="" width="20px" class="nav-img">Laporan Harian</a></li>
+                <li><a href="inventory.html"><img src="pct/Inventory.png" alt="" width="20px" class="nav-img">Inventori</a></li>            </ul>
         </nav>
     </div>
 
@@ -28,7 +27,7 @@
                 <form action="" >
                     <button type="submit" class="button">Cari</button>
                     <input type="text" class="search-box" placeholder="Masukan Nama Barang atau kode barang....">
-                    <button type="submit" class="add">+</button>
+                    <button id="addButton" type="button" class="add">+</button>
                 </form>
                     
             </section>
@@ -39,120 +38,13 @@
                         <th>Nama Barang</th>
                         <th>Kode Barang</th>
                         <th>Jumlah Stok</th>
+                        <th>Harga Barang</th>
                         <th>Action</th>
                     </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td class="action">
-                            
-                                <button type="button" class="update"> U </button>
-                                <button type="button" class="delete">D</button>
-                            
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>No</td>
-                        <td>Nama Barang</td>
-                        <td>Kode Barang</td>
-                        <td>Jumlah Stok</td>
-                        <td >
-                            <button type="button" class="update"> U </button>
-                            <button type="button" class="delete">D</button>
-                        </td>
-                    </tr>
+                    <tbody id='inventoryTableBody'>
+
+                    </tbody>
+                   
                 </table>
             </section>
         </section>
@@ -164,5 +56,70 @@
     </div>
 
     
+    <div id="popupContainer" class="popup-container">
+        <div class="popup-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <h2 class="title-popup">Tambah Produk</h2>
+            <form id="productForm" class="popup-form">
+                <div class="input-container">
+                    <label for="nama-barang" class="label-popup">Nama Barang</label>
+                    <input type="text" id="nama-barang" class="input-popup" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="kode-barang" class="label-popup">Kode Barang</label>
+                    <input type="text" id="kode-barang" class="input-popup" required>
+                </div>
+        
+                <div class="input-container">
+                    <label for="stok-barang" class="label-popup">Stok Barang</label>
+                    <input type="number" id="stok-barang" class="input-popup" required>
+                </div>
+        
+                <div class="input-container">  
+                    <label for="harga-barang" class="label-popup">Harga Barang</label>
+                    <input type="number" id="harga-barang" class="input-popup" required>
+                </div>
+
+                <button type="button" class="simpan-popup" id="simpan-inventory"> Simpan </button>
+            </form>
+        </div>
+    </div>
+    <div id="successPopup" class="popup-Nontifikasi">
+        <div class="popup-content-popup-Nontifikasi">
+            <p>Data berhasil ditambahkan!</p>
+        </div>
+    </div>    
+    
+    <div id="confirmDeletePopup" class="popup-container-del">
+        <div class="popup-content-del">
+            
+            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+            <button id="confirmDeleteButton" class="popup-button-del confirm-button-del">Konfirmasi</button>
+            <button id="cancelButton" class="popup-button-del cancel-button-del">Batal</button>
+        </div>
+    </div>
+
+    <div id="editPopup" class="popup-container-edit">
+        <div class="popup-content-edit">
+            <h2 class="title-popup">Edit Data Produk</h2>
+            <form id="editForm">
+                <label for="editNamaBarang">Nama Barang:</label>
+                <input type="text" id="editNamaBarang" name="editNamaBarang" required>
+                <label for="editKodeBarang">Kode Barang:</label>
+                <input type="text" id="editKodeBarang" name="editKodeBarang" required>
+                <label for="editStokBarang">Stok Barang:</label>
+                <input type="number" id="editStokBarang" name="editStokBarang" required>
+                <label for="editHargaBarang">Harga Barang:</label>
+                <input type="number" id="editHargaBarang" name="editHargaBarang" required>
+                <button type="submit" id="editSubmitButton" class="popup-button-edit edit-button-edit">Simpan</button>
+                <button type="button" id="editCancelButton" class="popup-button-edit cancel-button-edit">Batal</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+    <script src="js-logic/index.js"></script>
 </body>
 </html>
