@@ -235,7 +235,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid purple;
 }
 
 .close-button {
@@ -274,8 +273,14 @@ footer {
 .input-container{
     display: flex;
     justify-content: space-around;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
 }
+.input-container-edit{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
 .simpan-popup[type="button"] {
     padding: 10px 20px;
     background-color: #08193f;
@@ -358,20 +363,24 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(2, 2, 2, 0.5);
     justify-content: center;
     align-items: center;
     z-index: 999;
 }
 
 .popup-content-edit {
-    width: 25%;
-    margin-top: 13%;
-    margin-left: 43%;
+    background-color: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
     text-align: center;
+    max-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .popup-button-edit {

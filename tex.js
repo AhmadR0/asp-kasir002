@@ -121,3 +121,82 @@ window.onload = function(){
         button.addEventListener('click', handleDelete);
     });
 };
+
+
+app.post('/editInventory/:id', (req, res) => {
+    const itemId = req.params.id;
+    const { namaBarang, kodeBarang, stokBarang, hargaBarang } = req.body;
+    
+    const query = `
+        UPDATE Inventory
+        SET namaBrng = ?, kodeBrng = ?, stokBrng = ?, hrgaBrng = ?
+        WHERE id = ?
+    `;
+    
+    const values = [namaBarang, kodeBarang, stokBarang, hargaBarang, itemId];
+
+    conn.query(query, values, (err, result) => {
+        if (err) {
+            console.error('Gagal mengubah data', err);
+            res.status(500).json({ error: 'Gagal mengubah data' });
+        }
+        console.log('Data berhasil diubah');
+        res.status(200).json({ message: 'Data berhasil diubah' });
+    });
+});
+
+fetch(`http://localhost:8000/editInventory/${itemId}`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(result => {
+    console.log(result.message);
+    // Sembunyikan pop-up edit dan perbarui tampilan inventaris
+    const editPopup = document.getElementById('editPopup');
+    editPopup.style.display = 'none';
+    getAndDisplayInventory();
+})
+.catch(error => {
+    console.error('Terjadi Kesalahan', error);
+});
+
+
+const editSubmitButton = document.getElementById('editSubmitButton');
+
+editSubmitButton.addEventListener('click', () => {
+    const itemId = event.target.getAttribute('data-id'); // Ambil ID dari data yang ingin diubah
+    const editNamaBarang = document.getElementById('editNamaBarang').value;
+    const editKodeBarang = document.getElementById('editKodeBarang').value;
+    const editStokBarang = document.getElementById('editStokBarang').value;
+    const editHargaBarang = document.getElementById('editHargaBarang').value;
+
+    const data = {
+        namaBarang: editNamaBarang,
+        kodeBarang: editKodeBarang,
+        stokBarang: editStokBarang,
+        hargaBarang: editHargaBarang
+    };
+
+    // Kirim data perubahan ke server (gunakan metode POST atau PUT)
+    fetch(`http://localhost:8000/editInventory/${itemId}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log(result.message);
+        const editPopup = document.getElementById('editPopup');
+        editPopup.style.display = 'none';
+        getAndDisplayInventory();
+    })
+    .catch(error => {
+        console.error('Terjadi Kesalahan', error);
+    });
+});
