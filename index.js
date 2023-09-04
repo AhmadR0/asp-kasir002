@@ -9,7 +9,7 @@ const path = require('path');
 const conn = mysql.createConnection({
     host : 'localhost',
     user : 'root',
-    password : 'password',
+    password : '',
     database : 'Asp_family'
 });
 
